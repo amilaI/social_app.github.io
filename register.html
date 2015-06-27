@@ -1,149 +1,38 @@
 <!DOCTYPE html>
+<!-- @author - Amila Iddamalgoda - amila922@gmail.com 
+     User Registration
+-->
 <html>
 <head>
-	<title>User Registration | Test App</title>
+  <title>New Registration</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Material Design for Bootstrap -->
-    <link href="dist/css/roboto.min.css" rel="stylesheet">
-    <link href="dist/css/material-fullpalette.min.css" rel="stylesheet">
-    <link href="dist/css/ripples.min.css" rel="stylesheet">
+  <!-- Bootsrap.css-->
+  <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Dropdown.js -->
-    <link href="http://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css" rel="stylesheet">
+  <!-- Material Design for Bootstrap -->
+  <link href="dist/css/roboto.min.css" rel="stylesheet">
+  <link href="dist/css/material-fullpalette.min.css" rel="stylesheet">
+  <link href="dist/css/ripples.min.css" rel="stylesheet">
 
+  <!-- Dropdown.js -->
+  <link href="http://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css" rel="stylesheet">
 
-<!-- Page style -->
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      .header-panel {
-        background-color: #009587;
-        height: 144px;
-        position: relative;
-        z-index: 3;
-      }
-      .header-panel div {
-        position: relative;
-        height: 100%;
-      }
-      .header-panel h1 {
-        color: #FFF;
-        font-size: 20px;
-        font-weight: 400;
-        position: absolute;
-        bottom: 10px;
-        padding-left: 35px;
-      }
-
-      .menu {
-        overflow: auto;
-        padding: 0;
-      }
-      .menu, .menu * {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-      .menu ul {
-        padding: 0;
-        margin: 7px 0;
-      }
-      .menu ul li {
-        list-style: none;
-        padding: 20px 0 20px 50px;
-        font-size: 15px;
-        font-weight: normal;
-        cursor: pointer;
-      }
-      .menu ul li.active {
-        background-color: #dedede;
-        position: relative;
-      }
-      .menu ul li a {
-        color: rgb(51, 51, 51);
-        text-decoration: none;
-      }
-
-      .pages {
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 4;
-        padding: 0;
-        overflow: auto;
-      }
-      .pages > div {
-        padding: 0 5px;
-        padding-top: 64px;
-      }
-
-      .pages .header {
-        color: rgb(82, 101, 162);
-        font-size: 24px;
-        font-weight: normal;
-        margin-top: 5px;
-        margin-bottom: 60px;
-        letter-spacing: 1.20000004768372px;
-      }
-
-      .page {
-        transform: translateY(1080px);
-        transition: transform 0 linear;
-        display: none;
-        opacity: 0;
-        font-size: 16px;
-      }
-
-      .page.active {
-        transform: translateY(0px);
-        transition: all 0.3s ease-out;
-        display: block;
-        opacity: 1;
-      }
-
-      #opensource {
-        color: rgba(0, 0, 0, 0.62);
-        position: fixed;
-        margin-top: 50px;
-        margin-left: 50px;
-        z-index: 100;
-      }
-
-      #source-modal h4 {
-        color: black;
-      }
-      .login-fields{
-            font-size:24px;
-            color: black !important;
-      }
-      .form-login-button{
-            margin: 0;
-            background-color: transparent;
-            text-align: center;
-      }
-      .main-body{
-        background-color: #4DB6AC;
-      }
-      .form-registration-button{
-            margin: 0;
-            background-color: transparent;
-            text-align: center;
-
-      }
-    </style>
-
-    <!-- jQuery -->
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <!-- Page style -->
+  <link href="dist/css/socialapp_css.css" rel="stylesheet">
+  
+  <!-- jQuery -->
+  <!--<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
+  <script src="dist/js/jquery.min.js"></script>
 
 </head>
+
 <body class="">
 <div class="container-fluid main">
       <div>
         <div class="row">
               <div class="col-md-12">
-                  <h2 align="center" class="header">User Registration</h2>
+                  <h2 align="center" class="header">  <a class="btn btn-fab btn-raised btn-material-blue" href="login.html"><i class="mdi-navigation-arrow-back"></i></a>&nbsp;&nbsp;新規登録</h2>
               </div>
         </div>  
         <div class="row">
@@ -151,59 +40,65 @@
               <div class="col-md-4">
               <div class="form-group " style="padding:20px;border: 3px solid #8B80B0;border-radius: 15px;">
 
-                  <label for="exampleInputEmail1">User Name</label>
-                  <input type="text" class="form-control" id="userName" placeholder="User Name">
+                  <label for="exampleInputEmail1">ニックネーム</label>
+                  <input type="text" class="form-control" id="userName" placeholder="">
 <br>
-                  <label for="exampleInputEmail1">Gender</label>
+                  <label for="exampleInputEmail1">性別</label>
                   <div class="sample2">
                       <div class="radio radio-primary">
                         <label>
                           <input type="radio" name="sample2" value="option1" checked="">
-                          Male
+                          男性
                         </label>                    
                         <label>
                           <input type="radio" name="sample2" value="option1">
-                          Female
+                          女性
                         </label>
                       </div>            
                   </div>
 
-                  <label for="exampleInputEmail1">Date of Birth</label>
+                  <label for="exampleInputEmail1">生年月日</label>
                   <br>
                    <span class="inlineinput">
-                      <input type='text' class="form-control" style='display: inline; width: 50px;' placeholder="Day" />&nbsp;&nbsp;&nbsp;
-                        <input type='text' class="form-control" style='display: inline; width: 50px;' placeholder="Month" />&nbsp;&nbsp;&nbsp;
-                          <input type='text' class="form-control" style='display: inline; width: 50px;' placeholder="Year" />
+                      <input type='text' class="form-control" style='display: inline; width: 50px;' placeholder="年" />&nbsp;&nbsp;&nbsp;
+                        <input type='text' class="form-control" style='display: inline; width: 50px;' placeholder="月" />&nbsp;&nbsp;&nbsp;
+                          <input type='text' class="form-control" style='display: inline; width: 50px;' placeholder="日" />
                   </span>
                   <br><br>
-                  <label for="exampleInputEmail1">Marital status</label>
+                  <label for="exampleInputEmail1">未結婚</label>
                   <div class="sample2">
                       <div class="radio radio-primary">
                         <label>
                           <input type="radio" name="sample2" value="option1" checked="">
-                          Married
+                          未婚
                         </label>                    
                         <label>
                           <input type="radio" name="sample2" value="option1">
-                          Unmarried
+                          結婚
                         </label>
                       </div>            
                   </div>
                
-                  <label for="exampleInputEmail1">Occupation</label>
-                  <input type="text" class="form-control" id="userName" placeholder="Occupation">
+                  <label for="exampleInputEmail1">職業</label>
+                  <input type="text" class="form-control" id="occupation" placeholder="">
 
-                  <label for="exampleInputEmail1">Address</label>
-                  <input type="text" class="form-control" id="userName" placeholder="Address">
+                  <label for="exampleInputEmail1">現住所</label>
+                  <input type="text" class="form-control" id="address" placeholder="Address">
                   
-                   <label for="exampleInputEmail1">Mobile Number</label>
-                  <input type="text" class="form-control" id="userName" placeholder="Mobile Number">  
+                   <label for="mobileNumber">携帯電話番号</label>
+                   <br>
+                    <span class="inlineinput">
+                      <input type='text' class="form-control" style='display: inline; width: 50px;' placeholder="000" />&nbsp;&nbsp;&nbsp;
+                        <input type='text' class="form-control" style='display: inline; width: 50px;' placeholder="0000" />&nbsp;&nbsp;&nbsp;
+                          <input type='text' class="form-control" style='display: inline; width: 50px;' placeholder="0000" />
+                  </span>
+                  <br><br>
 
-                      <label for="exampleInputEmail1">E-mail</label>
-                  <input type="email" class="form-control" id="userName" placeholder="E-mail">  
+                      <label for="exampleInputEmail1">メールアドレス</label>
+                  <input type="email" class="form-control" id="email" placeholder="">  
 
                   <br>
-                  <label for="exampleInputEmail1">Photo Avatar</label>
+                  <label for="exampleInputEmail1">写真・アバター</label>
                   <div class="row">
                       <div class="col-xs-4">
                         
@@ -211,8 +106,8 @@
 
                       </div>
                        <div class="col-xs-8">
-                          <button align="center" class="btn btn-primary btn-raised">I take Pictures</button><br>
-                          <button align="center" class="btn btn-info btn-raised">Upload Photo</button>
+                          <button align="center" class="btn btn-primary btn-raised">写真を撮る</button><br>
+                          <button align="center" class="btn btn-info btn-raised">画像をアップロード</button>
 
                        </div>
 
@@ -220,9 +115,8 @@
                 <br><br>       
 
                   <div class="form-registration-button">
-                    <button align="center" class="btn btn-danger btn-raised" style="width: 250px;">ログイン</button>
-                  </div>         
-              </div>
+                    <a align="center" class="btn btn-danger btn-raised" href="confirm.html" style="width: 250px;">ログイン</a>         
+                  </div>
               </div>
               <div class="col-md-4"></div>
         </div>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Registration | Test App</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design for Bootstrap -->
+    <link href="dist/css/roboto.min.css" rel="stylesheet">
+    <link href="dist/css/material-fullpalette.min.css" rel="stylesheet">
+    <link href="dist/css/ripples.min.css" rel="stylesheet">
+
+    <!-- Dropdown.js -->
+    <link href="http://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css" rel="stylesheet">
+
+
+<!-- Page style -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .header-panel {
+        background-color: #009587;
+        height: 144px;
+        position: relative;
+        z-index: 3;
+      }
+      .header-panel div {
+        position: relative;
+        height: 100%;
+      }
+      .header-panel h1 {
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 400;
+        position: absolute;
+        bottom: 10px;
+        padding-left: 35px;
+      }
+
+      .menu {
+        overflow: auto;
+        padding: 0;
+      }
+      .menu, .menu * {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      .menu ul {
+        padding: 0;
+        margin: 7px 0;
+      }
+      .menu ul li {
+        list-style: none;
+        padding: 20px 0 20px 50px;
+        font-size: 15px;
+        font-weight: normal;
+        cursor: pointer;
+      }
+      .menu ul li.active {
+        background-color: #dedede;
+        position: relative;
+      }
+      .menu ul li a {
+        color: rgb(51, 51, 51);
+        text-decoration: none;
+      }
+
+      .pages {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 4;
+        padding: 0;
+        overflow: auto;
+      }
+      .pages > div {
+        padding: 0 5px;
+        padding-top: 64px;
+      }
+
+      .pages .header {
+        color: rgb(82, 101, 162);
+        font-size: 24px;
+        font-weight: normal;
+        margin-top: 5px;
+        margin-bottom: 60px;
+        letter-spacing: 1.20000004768372px;
+      }
+
+      .page {
+        transform: translateY(1080px);
+        transition: transform 0 linear;
+        display: none;
+        opacity: 0;
+        font-size: 16px;
+      }
+
+      .page.active {
+        transform: translateY(0px);
+        transition: all 0.3s ease-out;
+        display: block;
+        opacity: 1;
+      }
+
+      #opensource {
+        color: rgba(0, 0, 0, 0.62);
+        position: fixed;
+        margin-top: 50px;
+        margin-left: 50px;
+        z-index: 100;
+      }
+
+      #source-modal h4 {
+        color: black;
+      }
+      .login-fields{
+            font-size:24px;
+            color: black !important;
+      }
+      .form-login-button{
+            margin: 0;
+            background-color: transparent;
+            text-align: center;
+      }
+      .main-body{
+        background-color: #4DB6AC;
+      }
+      .form-registration-button{
+            margin: 0;
+            background-color: transparent;
+            text-align: center;
+
+      }
+      .social-navigationbar{
+          padding: 5px;
+          background-color: rgb(228, 219, 219);
+          text-align: center;
+          border-radius: 10px;
+        }
+        .social-buttons{
+          border-radius: 15px;
+          border: 1px solid black;
+        }
+        .form-login-button{
+            margin: 0;
+            background-color: transparent;
+            text-align: center;
+      }
+    </style>
+
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+</head>
+<body class="">
+<div class="container-fluid main">
+      <div>
+        <div class="row">
+              <div class="col-md-12">
+                  <h2 align="center" class="header">Navigation Bar</h2>
+              </div>
+        </div>  
+        <div class="row">
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+                
+              <div class="social-navigationbar">
+  <button class="btn btn-fab btn-raised btn-material-green-700"><i class="mdi-content-reply"></i></button>
+  &nbsp;
+  <button class="btn btn-fab btn-raised btn-material-light-green-A700"><i class="glyphicon glyphicon-send"></i></button>
+  &nbsp;
+  <button class="btn btn-fab btn-raised btn-material-pink"><i class="mdi-navigation-apps"></i></button> 
+  &nbsp;
+  <button class="btn btn-fab btn-raised btn-material-orange"><i class="mdi-communication-chat"></i></button>
+  &nbsp;
+  <button class="btn btn-fab btn-raised btn-material-blue-800"><i class="mdi-action-info"></i></button>
+   
+            </div>
+
+
+            <div>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <button class="btn btn-material-red social-buttons"><img src="dist/img/dogpaw.png" class="img-responsive">     <div class="ripple-wrapper">
+                    </div></button>
+                  </div>
+                  <div class="col-xs-4">
+                    <button class="btn btn-material-pink social-buttons"><img src="dist/img/car.png" class="img-responsive"><div class="ripple-wrapper"></div></button>
+                  </div>
+                  <div class="col-xs-4">
+                    <button class="btn btn-material-purple social-buttons"><img src="dist/img/map1.png" class="img-responsive"><div class="ripple-wrapper"></div></button>
+                  </div>
+                  <div class="col-xs-4">
+                    <button class="btn btn-material-purple-300 social-buttons"><img src="dist/img/user1.png" class="img-responsive"><div class="ripple-wrapper"></div></button>
+                  </div>
+                  <div class="col-xs-4">
+                    <button class="btn btn-material-blue social-buttons"><img src="dist/img/games.png" class="img-responsive"><div class="ripple-wrapper"></div></button>
+                  </div>
+                  <div class="col-xs-4">
+                    <button class="btn btn-material-teal-300 social-buttons"><img src="dist/img/bird.png" class="img-responsive"><div class="ripple-wrapper"></div></button>
+                  </div>
+                  <div class="col-xs-4">
+                    <button class="btn btn-material-light-blue social-buttons"><img src="dist/img/letters.png" class="img-responsive"><div class="ripple-wrapper"></div></button>
+                  </div>
+                  <div class="col-xs-4">
+                    <button class="btn btn-primary social-buttons"><img src="dist/img/apps1.png" class="img-responsive"><div class="ripple-wrapper"></div></button>
+                  </div>
+                  <div class="col-xs-4">
+                    <button class="btn btn-material-green social-buttons"><img src="dist/img/suit.png" class="img-responsive"><div class="ripple-wrapper"></div></button>
+                  </div>
+                  <div class="col-xs-4">
+                    <button class="btn btn-material-red social-buttons"><img src="dist/img/dogpaw.png" class="img-responsive">     <div class="ripple-wrapper">
+                    </div></button>
+                  </div>
+                  <div class="col-xs-8">
+                   <div class="form-login-button">
+                    <button class="btn btn-primary">もっと見る<div class="ripple-wrapper"></div></button>
+                   </div>
+                  </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+  
+              </div>
+              <div class="col-md-4"></div>
+        </div>
+      </div>
+
+
+
+
+ </div>
+
+
+<!-- Twitter Bootstrap -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Material Design for Bootstrap -->
+    <script src="dist/js/material.min.js"></script>
+    <script src="dist/js/ripples.min.js"></script>
+    <script>
+      $.material.init();
+    </script>
+
+</body>
+</html>

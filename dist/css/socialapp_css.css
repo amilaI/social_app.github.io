@@ -1,21 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Login | Test App</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Material Design for Bootstrap -->
-    <link href="dist/css/roboto.min.css" rel="stylesheet">
-    <link href="dist/css/material-fullpalette.min.css" rel="stylesheet">
-    <link href="dist/css/ripples.min.css" rel="stylesheet">
+/**
+*  @author - Amila Iddamalgoda - amila922@gmail.com
+*  Social app general CSS  
+**/
 
-    <!-- Dropdown.js -->
-    <link href="http://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css" rel="stylesheet">
-
-
-<!-- Page style -->
-    <style>
-      * {
+      *{
         box-sizing: border-box;
       }
       .header-panel {
@@ -124,56 +112,56 @@
             text-align: center;
       }
       .main-body{
-        background-color: #4DB6AC;
+        background-color: #DCE0CE;
       }
-    </style>
+      .main-register-body{
+        background-color: #DCE0CE;
+      }
+      .form-registration-button{
+            margin: 0;
+            background-color: transparent;
+            text-align: center;
 
-    <!-- jQuery -->
-    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-
-</head>
-<body class="main-body">
-<div class="container-fluid main">
-      <div style="margin-top:150px">
-        <div class="row">
-              <div class="col-md-12">
-                  <h2 align="center" class="header">新規登録</h2>
-              </div>
-        </div>  
-        <div class="row">
-              <div class="col-md-4"></div>
-              <div class="col-md-4">
-              <div class="form-group " style="padding:20px">
-
-                
-                <input type="text" class="form-control login-fields" id="userID" placeholder="ID">
-                <br>
-                <input type="password" class="form-control login-fields" id="userPassword" placeholder="パスワード">
-                <br>
-                <div class="form-login-button">
-                    <button align="center" class="btn btn-primary btn-raised">ログイン</button>
-                </div>
-              </div>
-              </div>
-              <div class="col-md-4"></div>
-        </div>
-      </div>
-
-
-
-
- </div>
-
-
-<!-- Twitter Bootstrap -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-    <!-- Material Design for Bootstrap -->
-    <script src="dist/js/material.min.js"></script>
-    <script src="dist/js/ripples.min.js"></script>
-    <script>
-      $.material.init();
-    </script>
-
-</body>
-</html>
+      }
+      .social-navigationbar{
+          padding: 4px;
+          background-color: rgb(228, 219, 219);
+          text-align: center;
+          border-radius: 10px;
+        }
+      .social-buttons{
+          border-radius: 15px;
+          border: 1px solid black;
+          min-width: 90px;
+      }
+      .form-login-button{
+            margin: 0;
+            background-color: transparent;
+            text-align: center;
+      }
+      .navigation_bar_icons{
+        font-size: 20px;
+        font-weight: bold;
+        top: -12px !important;
+        left: -5px !important;
+      }
+      .navigation_bar_home_icons{
+        font-size: 30px;
+        font-weight: bold;
+        top: -1px !important;
+        left:-2px !important;
+      }
+      .loginerror_msg{
+        display: none;
+      }
+      .custom-fab{
+        width: 40px !important;      
+        height: 40px !important;   
+      }
+      .bottom-nav-wrapper{
+        display: inline;
+      }
+      .bottom-nav-button{
+          min-width: 60px;
+          padding: 8px;
+      }
