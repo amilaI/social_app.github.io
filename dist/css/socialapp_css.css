@@ -66,6 +66,9 @@
         padding: 0 5px;
         padding-top: 64px;
       }
+      .badge{
+        background-color: #AB4545;
+      }
 
       .pages .header {
         color: rgb(82, 101, 162);
@@ -164,4 +167,7 @@
       .bottom-nav-button{
           min-width: 60px;
           padding: 8px;
+      }
+      .party{
+        font-size: 10px
       }

@@ -24,31 +24,39 @@
   <!-- jQuery -->
   <!--<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
   <script src="dist/js/jquery.min.js"></script>
+  <style type="text/css">
 
+    .dropdownjs:after {                     
+        content: "\e7c4" !important;
+    }
+    body{
+      background-color: #D2C6C6;
+    }
+  </style>
 </head>
 
 <body class="">
 <div class="container-fluid main">
       <div>
         
-        <div class="row" style="margin-top:100px">
+        <div class="row" style="margin-top:50px">
               <div class="col-md-4"></div>
               <div class="col-md-4">
               
               <!-- Top Navigation Bar-->  
               <div class="social-navigationbar">
-                  <button id="socialapp_signoutBtn" class="btn btn-fab btn-raised btn-material-light-green-A700"><i class="mdi-action-exit-to-app navigation_bar_home_icons"></i></button>
+                  <a id="socialapp_signoutBtn" href="index.html" class="btn btn-fab btn-raised btn-material-light-green-A700"><i class="mdi-action-exit-to-app navigation_bar_home_icons"></i></a>
                   &nbsp;
-                  <button id="socialapp_appsBtn" class="btn btn-fab btn-raised btn-material-pink"><i class="mdi-navigation-apps navigation_bar_home_icons"></i></button> 
+                  <a id="socialapp_appsBtn" href="profile_home.html" class="btn btn-fab btn-raised btn-material-pink"><i class="mdi-navigation-apps navigation_bar_home_icons"></i></a> 
                   &nbsp;
-                  <button id="socialapp_chatBtn" class="btn btn-fab btn-raised btn-material-orange"><i class="mdi-communication-chat navigation_bar_home_icons"></i></button>
+                  <a id="socialapp_chatBtn" class="btn btn-fab btn-raised btn-material-orange" href="message.html"><i class="mdi-communication-chat navigation_bar_home_icons"></i></a>
                   &nbsp;
                   <button id="socialapp_infoBtn" class="btn btn-fab btn-raised btn-material-blue-800"><i class="mdi-alert-error navigation_bar_home_icons"></i></button>   
               </div>
 
 
             <div>
-                <div class="row">
+                <div class="row" style="margin-top:50px">
                   <div class="col-xs-4">
                     <button class="btn btn-material-red social-buttons"><img src="dist/img/dogpaw.png" class="img-responsive">     <div class="ripple-wrapper">
                     </div></button>
@@ -83,7 +91,21 @@
                   </div>
                   <div class="col-xs-8">
                    <div class="form-login-button">
-                    <button class="btn btn-primary">もっと見る<div class="ripple-wrapper"></div></button>
+                   <div id="dropdown-menu" style="width:200px;margin: auto;margin-top:30px">
+         
+                        <select id="iSeeMoreNameID" class="form-control btn-primary"  id="publicationDropdown">
+                                <option selected disabled> もっと見る</option>
+                                <option value="golf">ゴルフ</option>
+                                <option value="">スキー</option>
+                                <option value="">コンパ</option>
+                                <option value="">ドライブ</option>
+                                <option value="">釣り</option>
+                                <option value="">スノーボード</option>
+                                <option value="">海水浴</option>
+                                <option value="">ツーリング</option>
+                                <option value="">コスプレ</option>                                  
+                        </select>
+                     </div>
                    </div>
                   </div>
 
@@ -115,8 +137,23 @@
     <!-- Material Design for Bootstrap -->
     <script src="dist/js/material.min.js"></script>
     <script src="dist/js/ripples.min.js"></script>
+
+    <!-- Dropdown.js -->
+    <script src="https://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.js"></script>
+    <script>
+      $("#dropdown-menu select").dropdown();
+    </script>
+
     <script>
       $.material.init();
+
+      $('#iSeeMoreNameID').on('change', function() {
+        var thisvalue = $('#iSeeMoreNameID').find("option:selected").text();
+        window.location.href="party7.html";
+
+      });
+
+
     </script>
 
 </body>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!-- @author - Amila Iddamalgoda - amila922@gmail.com 
+     Apps Home Page
+-->
+<html>
+<head>
+  <title>Create an Event</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- Bootsrap.css-->
+  <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Material Design for Bootstrap -->
+  <link href="dist/css/roboto.min.css" rel="stylesheet">
+  <link href="dist/css/material-fullpalette.min.css" rel="stylesheet">
+  <link href="dist/css/ripples.min.css" rel="stylesheet">
+
+  <!-- Dropdown.js -->
+  <link href="http://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css" rel="stylesheet">
+
+  <!-- Page style -->
+  <link href="dist/css/socialapp_css.css" rel="stylesheet">
+  
+  <!-- jQuery -->
+  <!--<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>-->
+  <script src="dist/js/jquery.min.js"></script>
+
+      <!-- Dropdown.js -->
+    <link href="http://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.css" rel="stylesheet">
+     <style>
+                #dropdown-menu h2 {
+                  padding: 14px;
+                  margin: 0;
+                  font-size: 16px;
+                  font-weight: 400;
+                }
+                #dropdown-menu .sample {
+                  width: 200px;
+                }
+                #dropdown-menu .form-group {
+                  margin: 30px 0;
+                }
+                .dropdownjs:after {                     
+                      content: "\e7c1" !important;
+                  }
+              </style>
+</head>
+
+<body class="">
+<div class="container-fluid main">
+      <div>
+        
+        <div class="row" style="margin-top:5px">
+              <div class="col-md-4"></div>
+              <div class="col-md-4">
+              
+              <div class="row">
+                    <div style="display:inherit;text-align:center">
+                        <div class="col-xs-12">
+                            <div style="border:2px solid;border-radius:5px;font-size:10px">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <a align="center" class="btn btn-material-indigo-800 btn-raised" >イベントを作成</a>
+                                        <br>                                            
+                                              <div id="dropdown-menu" style="width:200px;margin: auto;">
+         
+                                               <select class="form-control" id="publicationDropdown">
+                                                  <option value="genre">公開・非公開・グループのみ公開</option>
+                                                  <option value="public">>公開</option>
+                                                  <option value="private">非公開</option>
+                                                  <option value="group">グループのみ公開</option>
+                                                </select>
+                                                </div>
+ <br>  
+
+                                        <div class="form-group">
+                                            <label for="inputgenre" class="col-xs-4 control-label">ジャンル</label>
+                                            <div class="col-xs-3">
+                                               
+                                                <select>
+                                                  <option  value="genre">選択</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-5">
+                                                <button  class="form-control btn btn-material-light-blue btn-raised" id="choosePhotoBtn" >写真を選ぶ</button>
+                                            </div>
+                                        </div> 
+
+                                        <div class="form-group">
+                                            <label for="inputDate" class="col-xs-4 control-label">日時</label>
+                                            <div class="col-xs-3">
+                                                <input type="text" class="form-control" id="inputDate" placeholder="日付">
+                                            </div>
+                                            <div class="col-xs-5">
+                                                <input type="text" class="form-control" id="inputTime" placeholder="時間">
+                                            </div>
+                                        </div> 
+
+                                        <div class="form-group">
+                                            <label for="inputArea" class="col-xs-4 control-label">エリア</label>
+                                            <div class="col-xs-3">
+                                                <input type="text" class="form-control" id="inputPrefecture" placeholder="県">
+                                            </div>
+                                            <div class="col-xs-5">
+                                                <input type="text" class="form-control" id="inputCity" placeholder="市">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="inputArea" class="col-xs-4 control-label">場所</label>
+                                            <div class="col-xs-3">
+                                                <input type="text" class="form-control" id="inputRecommanded" placeholder="県">
+                                            </div>
+                                            <div class="col-xs-5">
+                                                <input type="text" class="form-control" id="inputAddress" placeholder="住所を入力">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group">
+                                            <label for="inputParticipationWomen" class="col-xs-4 control-label">人数　女性</label>
+                                            <div class="col-xs-3">
+                                                <input type="text" class="form-control" id="inputRecommanded" placeholder="２人">
+                                            </div>
+                                            <div class="col-xs-5">
+                                                <input type="text" class="form-control" id="inputAddress" placeholder="参加費用">
+                                            </div>
+                                            <label for="inputParticipationMen" class="col-xs-4 control-label">参加費　 男性</label>
+                                            <div class="col-xs-3">
+                                                <input type="text" class="form-control" id="inputRecommanded" placeholder="２人">
+                                            </div>
+                                            <div class="col-xs-5">
+                                                <input type="text" class="form-control" id="inputAddress" placeholder="参加費用">
+                                            </div>
+                                        </div> 
+
+
+                                        <div class="form-group">
+                                            <div class="row">
+                                            <label for="invitation" class="col-xs-4 control-label">招待</label>
+                                            <div class="col-xs-3">
+                                                <select>
+                                                  <option  value="groups">グループ</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-xs-5">
+                                                <select>
+                                                  <option  value="members">メンバー</option>
+                                                </select>
+                                            </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="title" class="col-xs-4 control-label">タイトル</label>
+                                            
+                                            <div class="col-xs-8">
+                                                <input type="text" class="form-control" id="title" placeholder="タイトル">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="detail" class="col-xs-4 control-label">詳細</label>
+                                            
+                                            <div class="col-xs-8">
+                                                <input type="text" class="form-control" id="detail" placeholder="">
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-group" style="margin:auto;display: inline;text-align:center;margin-left: 50px;margin-right: 50px;">
+                                          <a align="center" id="returnBtn" href="profile_home.html" class="btn btn-material-light-blue btn-raised" >戻る</a>
+                                          <a align="center" id="nextBtn" href="eventConfirmation.html" class="btn btn-material-light-blue btn-raised" >次へ</a>                                   
+                                        </div> 
+                                    </div>                                                   
+                                </div>  
+                            </div>
+                        </div>
+                    
+                        
+                    </div>
+                 </div>
+
+            </div>
+
+
+
+
+
+  
+              </div>
+              <div class="col-md-4"></div>
+        </div>
+      </div>
+
+
+
+
+ </div>
+
+
+    <!-- Twitter Bootstrap -->
+    <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+    <script src="dist/js/bootstrap.min.js"></script>
+
+
+    <!-- Material Design for Bootstrap -->
+    <script src="dist/js/material.min.js"></script>
+    <script src="dist/js/ripples.min.js"></script>
+
+    <!-- Dropdown.js -->
+    <script src="https://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.js"></script>
+    <script>
+      $("#dropdown-menu select").dropdown();
+    </script>
+    <script>
+      $.material.init();
+    </script>
+
+</body>
+</html>
