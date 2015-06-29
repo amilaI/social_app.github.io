@@ -135,7 +135,8 @@
       .social-buttons{
           border-radius: 15px;
           border: 1px solid black;
-          min-width: 90px;
+          width: 100%
+          
       }
       .form-login-button{
             margin: 0;

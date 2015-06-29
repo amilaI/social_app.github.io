@@ -4,6 +4,7 @@
 <head>
 	<title>Login</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Bootsrap.css-->
 	<!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -30,43 +31,34 @@
 
   <div class="container-fluid main">
       
-      <div style="margin-top:50px">
-        <div class="row">
-              <div class="col-md-12">
-                  <!-- <h2 align="center" class="header"></h2> -->
-              </div>
-        </div>  
-        <div class="row">
-              <div class="col-md-4"></div>
-              <div class="col-md-4">
-              <div class="form-group " style="padding:20px">
+      <div style="margin-top:50px">         
+        <div class="row">            
+            <div class="col-xs-12">
+            <div class="form-group " style="padding:20px">
 
                 <form id="loginForm_ajax" name="loginForm_ajax">
-                      <div class="form-login-button">
-                          <a align="center" class="btn btn-primary btn-raised" href="register.html" style="width:250px;font-size: 24px;">新規登録</a>
-                      </div>
-                      <input id="userID" type="text" class="form-control login-fields"  placeholder="ID" required>
-                      <br>
-                      <input id="userPassword"  type="password" class="form-control login-fields" placeholder="パスワード" required>
-                      <br>
-                      <div class="form-login-button">
-                          <button type="button" id="socialapp_loginBtn" align="center" href="home.html" class="btn btn-primary btn-raised" style="width:250px;font-size: 24px;">ログイン</button>
-                      </div>
                       
-                      <br>
-                      <div class="row">
-                             <div class="col-xs-12">
-                                  <div class="alert alert-dismissable alert-danger loginerror_msg">                                    
-                                    <strong>Authentication failed ! </strong> Please enter valid user credentials.
-                                </div>
-                             </div>
-                      </div>
+                    <div class="form-login-button">
+                          
+                        <a align="center" class="btn btn-primary btn-raised" href="register.html" style="font-size: 24px;">新規登録</a>
+                     
+                      	<input id="userID" type="text" class="form-control login-fields"  placeholder="ID" required>
+                        <br>
 
+                        <input id="userPassword"  type="password" class="form-control login-fields" placeholder="パスワード" required>
+                        <br>
+                     
+                        <button type="button" id="socialapp_loginBtn" align="center" href="home.html" class="btn btn-primary btn-raised" style="font-size: 24px;">ログイン</button>
+
+						<div class="alert alert-dismissable alert-danger loginerror_msg">                     
+                            <strong>Authentication failed ! </strong> Please enter valid user credentials.
+                        </div>
+
+                    </div>                     
+                    <br>
                 </form>
-
               </div>
-              </div>
-              <div class="col-md-4"></div>
+            </div>              
         </div>
       </div>
  </div>
